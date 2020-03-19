@@ -1,6 +1,8 @@
 # Sports Refund API
 
-The Sports Refund API enables third parties to get quotes and create policies via API calls.
+The Sports Refund API enables third parties to get quotes and create policies via API calls. A full Swagger document containing the endpoints and models is available in this repo, and client-side SDKs can be built in the language of your choice by pasting this swagger document into the online [Swagger editor](http://editor.swagger.io/).
+
+Below is a high-level overview of the key API endpoints used by a registration platform.
 
 ## Quote
 
