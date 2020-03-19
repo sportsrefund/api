@@ -1,0 +1,5106 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Sports Refund Quoting API",
+    "description": "Receive quotes and order insurance policies from Sports Refund.",
+    "termsOfService": "https://example.com/terms",
+    "contact": {
+      "name": "Sports Refund, Inc.",
+      "url": "https://github.com/sportsrefund",
+      "email": "info@sportsrefund.com"
+    },
+    "license": {
+      "name": "Use under MIT",
+      "url": "https://example.com/license"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Contact": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ContactItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ContactItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ContactItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Contact/{id}": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Contact"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Deletes a contact from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Identifier of the contact to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ContactItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identity": {
+      "get": {
+        "tags": [
+          "Identity"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Organization": {
+      "get": {
+        "tags": [
+          "Organization"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Organization"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Organization"
+        ],
+        "summary": "Deletes all matching records.",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Organization/{id}": {
+      "get": {
+        "tags": [
+          "Organization"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Organization"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Organization"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.OrganizationItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Payment/{id}": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "summary": "Return a list of rules defined.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Payment/createpolicy": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy/search": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "terms",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy/quote": {
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Quote a policy",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}/quote": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Quote an existing policy",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}/coverage": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "generate",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Policy/{id}/policy": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "generate",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Program": {
+      "get": {
+        "tags": [
+          "Program"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Program"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Program/{id}": {
+      "get": {
+        "tags": [
+          "Program"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Program"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.ProgramItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Program"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.ProgramItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Rule": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Return a list of rules defined.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Save a new ruleset.",
+        "requestBody": {
+          "description": "RuleSet",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Save a new ruleset.",
+        "requestBody": {
+          "description": "RuleSet",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rule/{name}": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Return a rule by name.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Rule"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Remove a RuleSet from cache and delete from the underlying store.",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Name of rule to delete.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sport": {
+      "get": {
+        "tags": [
+          "Sport"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.SportItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.SportItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.SportItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Sport"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sport"
+        ],
+        "summary": "Deletes all matching records.",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sport/{id}": {
+      "get": {
+        "tags": [
+          "Sport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Sport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.SportItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sport/seed": {
+      "get": {
+        "tags": [
+          "Sport"
+        ],
+        "summary": "Seeds the DB with basic list of sports.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sport/pricing": {
+      "get": {
+        "tags": [
+          "Sport"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/qbo4.Rule.RuleSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/State": {
+      "get": {
+        "tags": [
+          "State"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.StateItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.StateItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/quote.Models.StateItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "State"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "State"
+        ],
+        "summary": "Deletes all matching records.",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/State/{id}": {
+      "get": {
+        "tags": [
+          "State"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "State"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/quote.Models.StateItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "State"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/quote.Models.StateItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/State/seed": {
+      "get": {
+        "tags": [
+          "State"
+        ],
+        "summary": "Seeds the DB with US states.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "qbo4.Payment.Models.CardItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "expirationMonth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expirationYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expiration": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "writeOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.PolicyQuote": {
+        "type": "object",
+        "properties": {
+          "premium": {
+            "type": "number",
+            "format": "double"
+          },
+          "administrativeFee": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.PolicyItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "policy": {
+            "type": "string",
+            "nullable": true
+          },
+          "effective": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "purchased": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sport": {
+            "type": "string",
+            "nullable": true
+          },
+          "program": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "type": "string",
+            "description": "For group policies, the organization / team associated with the policy.",
+            "nullable": true
+          },
+          "approximateCost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "policyHolder": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            ],
+            "description": "Policy holder. Individual policies are held by Sports Refund; group policies are help by the Organization/Team.",
+            "nullable": true
+          },
+          "registrant": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            ],
+            "description": "Person registering a policy; typically the parent of an athlete.",
+            "nullable": true
+          },
+          "insured": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/quote.Models.InsuredItem"
+            },
+            "nullable": true
+          },
+          "broker": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            ],
+            "nullable": true
+          },
+          "premium": {
+            "type": "number",
+            "format": "double"
+          },
+          "administrativeFee": {
+            "type": "number",
+            "format": "double"
+          },
+          "card": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/qbo4.Payment.Models.CardItem"
+              }
+            ],
+            "nullable": true
+          },
+          "quote": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.PolicyQuote"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.InsuredItem": {
+        "type": "object",
+        "properties": {
+          "policyId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "policy": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.PolicyItem"
+              }
+            ],
+            "nullable": true
+          },
+          "contactId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "contact": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            ],
+            "nullable": true
+          },
+          "registrationFee": {
+            "type": "number",
+            "description": "Registration fee paid by insured; this is the max liability offered by the policy.",
+            "format": "double"
+          },
+          "birthDate": {
+            "type": "string",
+            "description": "Current rules require athletes be 26 or younger",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.ContactItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "policies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/quote.Models.InsuredItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Manage name and address information."
+      },
+      "quote.Models.OrganizationItem": {
+        "type": "object",
+        "properties": {
+          "organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "policies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/quote.Models.InsuredItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Payment.Models.PaymentMethodItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "card": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/qbo4.Payment.Models.CardItem"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Payment.Models.ContactItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "contact": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Payment.Models.PaymentItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "payment": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/qbo4.Payment.Models.PaymentMethodItem"
+              }
+            ],
+            "nullable": true
+          },
+          "payor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/qbo4.Payment.Models.ContactItem"
+              }
+            ],
+            "nullable": true
+          },
+          "payee": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/qbo4.Payment.Models.ContactItem"
+              }
+            ],
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "datePaid": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorizationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.SportItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sport": {
+            "type": "string",
+            "nullable": true
+          },
+          "rateIndividual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "rateGroup": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.ProgramItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "program": {
+            "type": "string",
+            "nullable": true
+          },
+          "sport": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.SportItem"
+              }
+            ],
+            "nullable": true
+          },
+          "contact": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/quote.Models.ContactItem"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.MemberTypes": {
+        "enum": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          191
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.MethodAttributes": {
+        "enum": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          53248
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.MethodImplAttributes": {
+        "enum": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          4096,
+          65535
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.CallingConventions": {
+        "enum": [
+          1,
+          2,
+          3,
+          32,
+          64
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.IntPtr": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "System.RuntimeMethodHandle": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.IntPtr"
+              }
+            ],
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.ModuleHandle": {
+        "type": "object",
+        "properties": {
+          "mdStreamVersion": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.CustomAttributeTypedArgument": {
+        "type": "object",
+        "properties": {
+          "argumentType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "value": {
+            "type": "object",
+            "additionalProperties": false,
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.MemberInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.CustomAttributeNamedArgument": {
+        "type": "object",
+        "properties": {
+          "memberInfo": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "typedValue": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.CustomAttributeTypedArgument"
+              }
+            ],
+            "readOnly": true
+          },
+          "memberName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isField": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.CustomAttributeData": {
+        "type": "object",
+        "properties": {
+          "attributeType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "constructor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ConstructorInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "constructorArguments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeTypedArgument"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "namedArguments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeNamedArgument"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.Module": {
+        "type": "object",
+        "properties": {
+          "assembly": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Assembly"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "fullyQualifiedName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "mdStreamVersion": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "moduleVersionId": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "scopeName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "moduleHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.ModuleHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.ConstructorInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "methodImplementationFlags": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodImplAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "callingConvention": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.CallingConventions"
+              }
+            ],
+            "readOnly": true
+          },
+          "isAbstract": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFinal": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isHideBySig": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStatic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVirtual": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyAndAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyOrAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructedGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethodDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "containsGenericParameters": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "methodHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeMethodHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.EventAttributes": {
+        "enum": [
+          0,
+          512,
+          1024,
+          1024
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.ParameterAttributes": {
+        "enum": [
+          0,
+          1,
+          2,
+          4,
+          8,
+          16,
+          4096,
+          8192,
+          16384,
+          32768,
+          61440
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.ParameterInfo": {
+        "type": "object",
+        "properties": {
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ParameterAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "member": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "parameterType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "position": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "isIn": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isLcid": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isOptional": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isOut": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isRetval": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "defaultValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "nullable": true,
+            "readOnly": true
+          },
+          "rawDefaultValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "nullable": true,
+            "readOnly": true
+          },
+          "hasDefaultValue": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.ICustomAttributeProvider": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "System.Reflection.MethodInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "returnParameter": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ParameterInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "returnType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "returnTypeCustomAttributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ICustomAttributeProvider"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "methodImplementationFlags": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodImplAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "callingConvention": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.CallingConventions"
+              }
+            ],
+            "readOnly": true
+          },
+          "isAbstract": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFinal": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isHideBySig": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStatic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVirtual": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyAndAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyOrAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructedGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethodDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "containsGenericParameters": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "methodHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeMethodHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.EventInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.EventAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "addMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "removeMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "raiseMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isMulticast": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "eventHandlerType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.FieldAttributes": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          4096,
+          8192,
+          32768,
+          38144
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.RuntimeFieldHandle": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.IntPtr"
+              }
+            ],
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.FieldInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.FieldAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "fieldType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isInitOnly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isLiteral": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNotSerialized": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPinvokeImpl": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStatic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyAndAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyOrAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "fieldHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeFieldHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.PropertyAttributes": {
+        "enum": [
+          0,
+          512,
+          1024,
+          4096,
+          8192,
+          16384,
+          32768,
+          62464
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.PropertyInfo": {
+        "type": "object",
+        "properties": {
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "propertyType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.PropertyAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "canRead": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "canWrite": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "getMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "setMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.MethodBase": {
+        "type": "object",
+        "properties": {
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "methodImplementationFlags": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodImplAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "callingConvention": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.CallingConventions"
+              }
+            ],
+            "readOnly": true
+          },
+          "isAbstract": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructor": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFinal": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isHideBySig": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isStatic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVirtual": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyAndAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFamilyOrAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructedGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethod": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethodDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "containsGenericParameters": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "methodHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeMethodHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.GenericParameterAttributes": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8,
+          16,
+          28
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.TypeAttributes": {
+        "enum": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          7,
+          8,
+          16,
+          24,
+          32,
+          32,
+          128,
+          256,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          65536,
+          131072,
+          196608,
+          196608,
+          262144,
+          264192,
+          1048576,
+          12582912
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Runtime.InteropServices.LayoutKind": {
+        "enum": [
+          0,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Runtime.InteropServices.StructLayoutAttribute": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Runtime.InteropServices.LayoutKind"
+              }
+            ],
+            "readOnly": true
+          },
+          "typeId": {
+            "type": "object",
+            "additionalProperties": false,
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.RuntimeTypeHandle": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.IntPtr"
+              }
+            ],
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Reflection.TypeInfo": {
+        "type": "object",
+        "properties": {
+          "genericTypeParameters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Type"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredConstructors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.ConstructorInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredEvents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.EventInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.FieldInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.MemberInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredMethods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredNestedTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.TypeInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaredProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.PropertyInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "implementedInterfaces": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Type"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isInterface": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "namespace": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assemblyQualifiedName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assembly": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Assembly"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isNested": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodBase"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "underlyingSystemType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isTypeDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isByRef": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPointer": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructedGenericType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericTypeParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethodParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericTypeDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSZArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVariableBoundArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isByRefLike": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasElementType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "genericTypeArguments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Type"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "genericParameterPosition": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "genericParameterAttributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.GenericParameterAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.TypeAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "isAbstract": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isImport": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSealed": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamANDAssem": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamORAssem": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNotPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAutoLayout": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isExplicitLayout": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isLayoutSequential": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAnsiClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAutoClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isUnicodeClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isCOMObject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isContextful": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEnum": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isMarshalByRef": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrimitive": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isValueType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSignatureType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "structLayoutAttribute": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Runtime.InteropServices.StructLayoutAttribute"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "typeInitializer": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ConstructorInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "typeHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeTypeHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "guid": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "baseType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isSerializable": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "containsGenericParameters": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVisible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Security.SecurityRuleSet": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "System.Reflection.Assembly": {
+        "type": "object",
+        "properties": {
+          "definedTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.TypeInfo"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "exportedTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Type"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "codeBase": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "entryPoint": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "imageRuntimeVersion": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isDynamic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectionOnly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isFullyTrusted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "escapedCodeBase": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "manifestModule": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.Module"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "globalAssemblyCache": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hostContext": {
+            "type": "integer",
+            "format": "int64",
+            "readOnly": true
+          },
+          "securityRuleSet": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Security.SecurityRuleSet"
+              }
+            ],
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "System.Type": {
+        "type": "object",
+        "properties": {
+          "isInterface": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "memberType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MemberTypes"
+              }
+            ],
+            "readOnly": true
+          },
+          "namespace": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assemblyQualifiedName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assembly": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Assembly"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "module": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.Module"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isNested": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "declaringType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "declaringMethod": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.MethodBase"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "reflectedType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "underlyingSystemType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isTypeDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isByRef": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPointer": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isConstructedGenericType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericTypeParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericMethodParameter": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isGenericTypeDefinition": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSZArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVariableBoundArray": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isByRefLike": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasElementType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "genericTypeArguments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Type"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "genericParameterPosition": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "genericParameterAttributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.GenericParameterAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "attributes": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.TypeAttributes"
+              }
+            ],
+            "readOnly": true
+          },
+          "isAbstract": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isImport": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSealed": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSpecialName": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedAssembly": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamANDAssem": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamily": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedFamORAssem": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedPrivate": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNestedPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isNotPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAutoLayout": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isExplicitLayout": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isLayoutSequential": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAnsiClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isAutoClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isUnicodeClass": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isCOMObject": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isContextful": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isEnum": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isMarshalByRef": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isPrimitive": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isValueType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSignatureType": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecuritySafeCritical": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isSecurityTransparent": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "structLayoutAttribute": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Runtime.InteropServices.StructLayoutAttribute"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "typeInitializer": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Reflection.ConstructorInfo"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "typeHandle": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.RuntimeTypeHandle"
+              }
+            ],
+            "readOnly": true
+          },
+          "guid": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "baseType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true,
+            "readOnly": true
+          },
+          "isSerializable": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "containsGenericParameters": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isVisible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "customAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/System.Reflection.CustomAttributeData"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "isCollectible": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "metadataToken": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Rule.Input": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Rule.Outcome": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/System.Type"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "qbo4.Rule.Rule": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "qbo4.Rule.RuleSet": {
+        "type": "object",
+        "properties": {
+          "inputList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/qbo4.Rule.Input"
+            },
+            "nullable": true
+          },
+          "outcomeList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/qbo4.Rule.Outcome"
+            },
+            "nullable": true
+          },
+          "ruleList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/qbo4.Rule.Rule"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "quote.Models.StateItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "expiresDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
