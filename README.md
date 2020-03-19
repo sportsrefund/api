@@ -40,7 +40,9 @@ will return JSON structure like this:
 
 Creation of a policy includes:
 
-- 
+- Registrant, which is the name of the person registering for the insurance policy
+- Insured: an array of insured parties (athletes), including their birthdate and registration fee
+- Credit card information: contact Sports Refund to be set up to be invoiced instead of paying by credit card
 
 Endpoint: `/api/Payment/createpolicy`
 
