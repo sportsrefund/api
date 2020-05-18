@@ -1,10 +1,42 @@
-# Sports Refund API
+# Sports Refund 
 
 The Sports Refund API enables third parties to get quotes and create policies via API calls. A full Swagger document containing the endpoints and models is available in this repo, and client-side SDKs can be built in the language of your choice by pasting this swagger document into the online [Swagger editor](http://editor.swagger.io/).
 
-Below is a high-level overview of the key API endpoints used by a registration platform.
+Below is a high-level overview of the suggested methods of integration by a registration platform.
 
-## Quote
+## Terms
+
+Key terms to understand:
+
+|Term|Required|Description|
+|-|-|-|
+|Sport|yes|The sport being played. Insurance carriers charge different rates for different sports.|
+|Program|yes|Group or Individual. Used to determine insurance rates.|
+|Referral Code|no|Used to identify referrals from Sports Refund partner companies, and may impact rates.|
+|Coupon Code|no|Used to identify marketing campaigns.|
+|Insured|yes|Individual athlete being insured (aka 'the kid who plays').|
+|Registrant|yes|Individual registering for insurance (aka 'mom or dad').|
+|Organization|yes|Name of the club or team that the insured party is playing for.|
+
+## HTML: Link
+
+Embed a link to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html), optionally including a Sport, Organization, ReferralCode or CouponCode.
+
+```html
+<a href="https://quote.sportsrefund.com/quote.html">Get a quote</a>
+<a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer">Get a quote</a>
+<a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer&ReferralCode=SomeCode">Get a quote</a>
+<a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote</a>
+```
+
+## HTML: Embedded Form
+
+When using a simple embedded form, a registration site passes information to avoid making a registrant re-enter information, such as the sport, a referral code, and/or an athlete's name.
+
+A [fiddle](https://jsfiddle.net/otpam3qb/1/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
+
+
+## API: Get a Quote
 
 Endpoint: `/api/Policy/quote`
 
@@ -38,7 +70,7 @@ will return JSON structure like this:
 }
 ```
 
-## Create a Policy
+## API: Create a Policy
 
 Creation of a policy includes:
 
