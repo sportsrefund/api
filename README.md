@@ -136,12 +136,12 @@ Sample response:
 
 ```json
 {
-	"paymentTransactionID": 1,
-	"paymentTransaction": "This transaction has been approved.",
-	"amount": 138.0,
-	"status": "Success",
-	"serviceSubmissionDate": "2020-05-20T11:27:36.6988823Z",
-	"transactionID": "60143297830",
-	"authorizationCode": "YB9CNL"
+  "paymentTransactionID": 1,
+  "paymentTransaction": "This transaction has been approved.",
+  "amount": 138.0,
+  "status": "Success",
+  "serviceSubmissionDate": "2020-05-20T11:27:36.6988823Z",
+  "transactionID": "60143297830",
+  "authorizationCode": "YB9CNL"
 }
 ```
