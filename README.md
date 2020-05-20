@@ -82,7 +82,7 @@ Endpoint: `/api/Payment/createpolicy`
 
 Sample Request:
 
-``` json
+```json
 {
   "effective": "2020-04-01",
   "expires": "2021-04-01",
@@ -127,7 +127,21 @@ Sample Request:
     "cardNumber": "[credit card number here]",
     "cardCode": "[CVV code]",
     "expirationMonth": 10,
-    "expirationYear": 2020
+    "expirationYear": 2022
   },
+}
+```
+
+Sample response:
+
+```json
+{
+	"paymentTransactionID": 1,
+	"paymentTransaction": "This transaction has been approved.",
+	"amount": 138.0,
+	"status": "Success",
+	"serviceSubmissionDate": "2020-05-20T11:27:36.6988823Z",
+	"transactionID": "60143297830",
+	"authorizationCode": "YB9CNL"
 }
 ```
