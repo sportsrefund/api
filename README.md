@@ -33,6 +33,27 @@ Embed a link to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.ht
 
 When using a simple embedded form, a registration site passes information to avoid making a registrant re-enter information, such as the sport, a referral code, and/or an athlete's name.
 
+``` html
+<form target="_blank" method="get" action="https://quote.sportsrefund.com/quote.html">
+  <input type="hidden" name="Organization" value="Acme Soccer"/>
+  <input type="hidden" name="Cost" value="2500"/>
+  <input type="hidden" name="Sport" value="Soccer"/>
+  <input type="hidden" name="ReferralCode" value="SpecialDiscount"/>
+  <input type="text" name="First" placeholder="First name"/>
+  <input type="text" name="Last" placeholder="Last name"/>
+  <input type="text" name="DOB" placeholder="Birth Date" value="2/3/2004"/>
+
+  <br/>
+  <input type="text" name="Address" placeholder="Address"/>
+  <br/>
+  <input type="text" name="City" placeholder="City"/>
+  <input type="text" name="State" placeholder="State"/>
+  <input type="text" name="Zip" placeholder="Zip"/>
+  </br>
+  <button type="submit">Get a quote</button>
+</form>
+```
+
 A [fiddle](https://jsfiddle.net/otpam3qb/1/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
 
 
