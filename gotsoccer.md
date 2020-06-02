@@ -45,7 +45,7 @@ Sample Request:
     {
       "contact": {
         "fisrtName": "Bobby"
-        "lastname": "Beaman"
+        "lastName": "Beaman"
       },
       "registrationFee": 2500,
       "birthDate": "2010-01-01"
@@ -53,7 +53,7 @@ Sample Request:
     {
       "contact": {
         "fisrtName": "Charlie"
-        "lastname": "Chaplin"
+        "lastName": "Chaplin"
       },
       "registrationFee": 2255.75,
       "birthDate": "2010-02-02"
