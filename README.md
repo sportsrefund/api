@@ -127,7 +127,7 @@ Sample Request:
       "contactId": 0,
       "contact": {
         "fisrtName": "Bobby"
-        "lastname": "Beaman"
+        "lastName": "Beaman"
       },
       "registrationFee": 0,
       "birthDate": "2010-01-01"
@@ -137,7 +137,7 @@ Sample Request:
       "contactId": 0,
       "contact": {
         "fisrtName": "Charlie"
-        "lastname": "Chaplin"
+        "lastName": "Chaplin"
       },
       "registrationFee": 0,
       "birthDate": "2010-02-02"
