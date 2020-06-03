@@ -26,6 +26,8 @@ When using a json-based embedded form, pass Json using a form with a hidden `Pol
 </form>
 ```
 
+A [sample fiddle](https://jsfiddle.net/etj8dL4n/1/) is available.
+
 Sample Request:
 
 ```json
