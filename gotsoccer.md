@@ -20,7 +20,7 @@ registration fee|registrationFee|
 When using a json-based embedded form, pass Json using a form with a hidden `Policy` field:
 
 ``` html
-<form target="_blank" method="get" action="https://quote.sportsrefund.com/quote.html">
+<form target="_blank" method="post" action="https://quote.sportsrefund.com/quote.html">
   <input type="hidden" name="Policy" value="{see json below}"/>
   <button type="submit">Get a quote</button>
 </form>
