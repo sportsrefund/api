@@ -29,7 +29,7 @@ Embed a link to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.ht
 <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>
 ```
 
-### Production Environment Links
+### Production Environment Sample Links
 
 The Production environment domain is `quote.sportsrefund.com`:
 
@@ -38,14 +38,14 @@ The Production environment domain is `quote.sportsrefund.com`:
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer&ReferralCode=SomeCode">Get a quote using a referral code</a>
 - <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>|
 
-### Test Environment Links
+### Test Environment Sample Links
 
 The Test environment domain is `uatquote.sportsrefund.com`:
 
 - <a href="https://quote.sportsrefund.com/quote.html">Get a quote</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer">Get a quote for Soccer</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer&ReferralCode=SomeCode">Get a quote using a referral code</a>
-- <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>|
+- <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>
 
 ## HTML: Embedded Form
 
