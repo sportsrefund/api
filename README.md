@@ -36,7 +36,7 @@ The Production environment domain is `quote.sportsrefund.com`:
 - <a href="https://quote.sportsrefund.com/quote.html">Get a quote</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer">Get a quote for Soccer</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer&ReferralCode=SomeCode">Get a quote using a referral code</a>
-- <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>|
+- <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>
 
 ### Test Environment Sample Links
 
