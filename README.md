@@ -75,6 +75,56 @@ When using a simple embedded form, a registration site passes information to avo
 A [fiddle](https://jsfiddle.net/otpam3qb/1/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
 
 
+## HTML: Embedded Json
+
+When using a json-based embedded form, pass Json using a form with a hidden `Policy` field:
+
+``` html
+<form target="_blank" method="post" action="https://quote.sportsrefund.com/quote.html">
+  <input type="hidden" name="Policy" value="{see json below}"/>
+  <button type="submit">Get a quote</button>
+</form>
+```
+
+A [sample fiddle](https://jsfiddle.net/etj8dL4n/1/) is available.
+
+Sample Request:
+
+```json
+{
+  "sport": "Soccer",
+  "program": "Individual",
+  "effective": "2020-06-08",
+  "expires": "2020-06-08",
+  "referralCode": "GotSoccer",
+  "organization": "ABC Soccer Club",
+  "registrant": {
+    "firstName": "Adam",
+    "lastName": "Ant",
+    "email": "a.ant@gmail.com",
+  },
+  "insured": [
+    {
+      "contact": {
+        "fisrtName": "Bobby"
+        "lastName": "Beaman"
+      },
+      "registrationFee": 2500,
+      "birthDate": "2010-01-01"
+    },
+    {
+      "contact": {
+        "fisrtName": "Charlie"
+        "lastName": "Chaplin"
+      },
+      "registrationFee": 2255.75,
+      "birthDate": "2010-02-02"
+    }
+  ],
+}
+```
+
+
 ## API: Get a Quote
 
 Endpoint: `/api/Policy/quote`
