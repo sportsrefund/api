@@ -29,6 +29,32 @@ Embed a link to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.ht
 <a href="https://quote.sportsrefund.com/quote.html?CouponCode=MyCoupon">Get a quote using a coupon code</a>
 ```
 
+You can pass querystring values for any matching `Policy' json values:
+
+|Json Value|Querystring Parameter|
+|-|-|
+|Sport|Sport|
+|ReferralCode|ReferralCode|
+|CouponCode|CouponCode|
+|Registrant.FirstName|Registrant_FirstName|
+|Registrant.LastName|Registrant_LastName|
+|Registrant.Address|Registrant_Address|
+|Registrant.City|Registrant_City|
+|Registrant.State|Registrant_State|
+|Registrant.Zip|Registrant_Zip|
+|Insured[0].RegistrationFee|Insured_0_RegistrationFee|
+|Insured[0].BirthDate|Insured_0_BirthDate|
+|Insured[1].Contact.FirstName|Insured_1_Contact_FirstName|
+|Insured[1].Contact.LastName|Insured_1_Contact_LastName|
+|Insured[2].Contact.Address|Insured_2_Contact_Address|
+|Insured[2].Contact.City|Insured_2_Contact_City|
+|Insured[2].Contact.State|Insured_2_Contact_State|
+|Insured[2].Contact.Zip|Insured_2_Contact_Zip|
+
+
+
+
+
 ### Production Environment Sample Links
 
 The Production environment domain is `quote.sportsrefund.com`:
