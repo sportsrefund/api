@@ -94,7 +94,7 @@ When using a simple embedded form, a registration site passes information to avo
 </form>
 ```
 
-A [fiddle](https://jsfiddle.net/7vuca1yp/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
+A [fiddle](https://jsfiddle.net/7vuca1yp/1/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
 
 
 ## HTML: Embedded Json
