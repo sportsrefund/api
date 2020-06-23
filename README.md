@@ -51,10 +51,6 @@ You can pass querystring values for any matching `Policy' json values:
 |Insured[2].Contact.State|Insured_2_Contact_State|
 |Insured[2].Contact.Zip|Insured_2_Contact_Zip|
 
-
-
-
-
 ### Production Environment Sample Links
 
 The Production environment domain is `quote.sportsrefund.com`:
@@ -80,25 +76,25 @@ When using a simple embedded form, a registration site passes information to avo
 ``` html
 <form target="_blank" method="get" action="https://quote.sportsrefund.com/quote.html">
   <input type="hidden" name="Organization" value="Acme Soccer"/>
-  <input type="hidden" name="Cost" value="2500"/>
   <input type="hidden" name="Sport" value="Soccer"/>
   <input type="hidden" name="ReferralCode" value="SpecialDiscount"/>
-  <input type="text" name="First" placeholder="First name"/>
-  <input type="text" name="Last" placeholder="Last name"/>
-  <input type="text" name="DOB" placeholder="Birth Date" value="2/3/2004"/>
+  <input type="hidden" name="Insured_0_RegistrationFee" value="2500"/>
+  <input type="text" name="Insured_0_Contact_FirstName" placeholder="First name"/>
+  <input type="text" name="Insured_0_Contact_LastName" placeholder="Last name"/>
+  <input type="text" name="Insured_0_DOB" placeholder="Birth Date" value="2/3/2004"/>
 
   <br/>
-  <input type="text" name="Address" placeholder="Address"/>
+  <input type="text" name="Insured_0_Contact_Address" placeholder="Address"/>
   <br/>
-  <input type="text" name="City" placeholder="City"/>
-  <input type="text" name="State" placeholder="State"/>
-  <input type="text" name="Zip" placeholder="Zip"/>
+  <input type="text" name="Insured_0_Contact_City" placeholder="City"/>
+  <input type="text" name="Insured_0_Contact_State" placeholder="State"/>
+  <input type="text" name="Insured_0_Contact_Zip" placeholder="Zip"/>
   </br>
   <button type="submit">Get a quote</button>
 </form>
 ```
 
-A [fiddle](https://jsfiddle.net/otpam3qb/1/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
+A [fiddle](https://jsfiddle.net/7vuca1yp/) demonstrates embedding a form into a registration website which passes the information to [quote.sportsrefund.com](https://quote.sportsrefund.com/quote.html).
 
 
 ## HTML: Embedded Json
