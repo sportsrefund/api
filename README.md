@@ -81,7 +81,7 @@ When using a simple embedded form, a registration site passes information to avo
   <input type="hidden" name="Insured_0_RegistrationFee" value="2500"/>
   <input type="text" name="Insured_0_Contact_FirstName" placeholder="First name"/>
   <input type="text" name="Insured_0_Contact_LastName" placeholder="Last name"/>
-  <input type="text" name="Insured_0_DOB" placeholder="Birth Date" value="2/3/2004"/>
+  <input type="text" name="Insured_0_BirthDate" placeholder="Birth Date" value="2/3/2004"/>
 
   <br/>
   <input type="text" name="Insured_0_Contact_Address" placeholder="Address"/>
