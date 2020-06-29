@@ -38,6 +38,7 @@ You can pass querystring values for any matching `Policy' json values:
 |CouponCode|CouponCode|
 |Registrant.FirstName|Registrant_FirstName|
 |Registrant.LastName|Registrant_LastName|
+|Registrant.Email|Registrant_Email|
 |Registrant.Address|Registrant_Address|
 |Registrant.City|Registrant_City|
 |Registrant.State|Registrant_State|
