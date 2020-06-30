@@ -54,7 +54,7 @@ You can pass querystring values for any matching `Policy' json values:
 
 ### Production Environment Sample Links
 
-The Production environment domain is `quote.sportsrefund.com`:
+The Production environment domain is `quote.sportsrefund.com/quote.html`:
 
 - <a href="https://quote.sportsrefund.com/quote.html">Get a quote</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer">Get a quote for Soccer</a>
@@ -63,7 +63,7 @@ The Production environment domain is `quote.sportsrefund.com`:
 
 ### Test Environment Sample Links
 
-The Test environment domain is `uatquote.sportsrefund.com`:
+The Test environment domain is `uatquote.sportsrefund.com/quote.html`:
 
 - <a href="https://quote.sportsrefund.com/quote.html">Get a quote</a>
 - <a href="https://quote.sportsrefund.com/quote.html?Sport=Soccer">Get a quote for Soccer</a>
