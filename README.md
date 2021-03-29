@@ -129,7 +129,7 @@ Sample Request:
   "insured": [
     {
       "contact": {
-        "fisrtName": "Bobby"
+        "firstName": "Bobby"
         "lastName": "Beaman"
       },
       "registrationFee": 2500,
@@ -137,7 +137,7 @@ Sample Request:
     },
     {
       "contact": {
-        "fisrtName": "Charlie"
+        "firstName": "Charlie"
         "lastName": "Chaplin"
       },
       "registrationFee": 2255.75,
